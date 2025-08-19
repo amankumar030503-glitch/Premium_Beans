@@ -1,0 +1,150 @@
+        body {
+            background-color: #f3f1ee;
+            font-family: "Bebas Neue", sans-serif;
+            letter-spacing: 3px;
+            overflow-x: hidden;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+            scroll-behavior: smooth;
+        }
+
+        a.text-decoration-none,
+        button,
+        .btn {
+            transition: all 0.3s ease-in-out;
+            transform: scale(1);
+        }
+
+        /* Hover effect */
+        a.text-decoration-none:hover,
+        button:hover,
+        .btn:hover {
+            border-bottom: 2px rgb(60, 36, 21);
+            transform: scale(1.05);
+        }
+
+        /* Click effect */
+        a.text-decoration-none:active,
+        button:active,
+        .btn:active {
+            transform: scale(0.95);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Card hover animation */
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Navbar links hover */
+        .navbar-nav .nav-item a {
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .navbar-nav .nav-item a:hover {
+            color: #d2691e;
+            /* coffee accent */
+            transform: scale(1.1);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            display: none;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* When dropdown is shown */
+        .dropdown-menu.show {
+            position: absolute;
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+            z-index: 2000;
+        }
+
+        body.fade-out {
+            opacity: 0;
+        }
+
+        .custom {
+            color: rgb(60, 36, 21)
+        }
+
+        .bg-custom {
+            background-color: rgb(255, 250, 244);
+        }
+
+        .navbar-dark .navbar-toggler {
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .offcanvas-end {
+            background-color: #6f4e37;
+            color: white;
+        }
+
+        .offcanvas-backdrop.show {
+            opacity: 0.6;
+        }
+
+        .customclr {
+            background-color: rgb(232, 219, 203);
+        }
+
+        .fs-7 {
+            font-size: 5rem;
+        }
+
+        .ls-3 {
+            letter-spacing: 2px;
+        }
+
+        .animleft {
+            animation: fadeleft 1s ease-in-out;
+        }
+
+        .animright {
+            animation: faderight 1s ease-in-out;
+        }
+
+        @media (min-width: 992px) {
+            .desktop-menu {
+                display: flex !important;
+            }
+
+            .navbar-toggler {
+                display: none;
+            }
+        }
+
+        /* Animation */
+        @keyframes faderight {
+            0% {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0px);
+            }
+        }
+
+        @keyframes fadeleft {
+            0% {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0px);
+            }
+        }
